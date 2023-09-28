@@ -1,0 +1,72 @@
+/* styles.css */
+
+.employee-container {
+    padding: 20px;
+    border: 1px solid #d1a9a9;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+  }
+
+  .button {
+    background: linear-gradient(to bottom, #dc3545, #ff5252);
+    background-color: #b01c1f;
+    border-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .fetch-button {
+    background: linear-gradient(to bottom, #97434b, #ff5252);
+    background-color: #b01c1f;
+    border-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .salary-list {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  
+  .employee-info {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #dbc0c0;
+    border-radius: 5px;
+    background-color: rgb(233, 224, 224);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .employee-id {
+    font-weight: bold;
+  }
+  
+  .calculated-salary {
+    color: #300606;
+  }
+  
+  .name {
+    font-size: 16px;
+  }
+  
+  .salary,
+  .advantage {
+    color: #661329;
+    font-weight: bold;
+  }
+  

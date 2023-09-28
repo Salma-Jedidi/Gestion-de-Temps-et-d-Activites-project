@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inscription</title>
+    <style>
+        a.bouton {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+     appearance: button;
+     text-decoration: none;
+     background-color: #007bff;
+     color: #000;
+     padding: 10px 20px;
+     border-radius: 5px;
+     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+body {
+   margin: 0;
+   padding: 20px;
+   font-family: Arial, sans-serif;
+   width: 120%;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+ /* background-image: url('../assets/Images/time-management.jpg'); /* Chemin vers votre image */
+  background-image:linear-gradient(to bottom, #edeaeb, #dcd1d7);
+
+}
+
+
+.signup-container {
+   max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 10px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+   margin-top: 0;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="password"] {
+   width: 80%;
+   padding: 10px;
+   margin-top: 10px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+}
+
+.signup-container input[type="submit"] {
+   width: 80%;
+   padding: 10px;
+   margin-top: 20px;
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+}
+
+.signup-container input[type="submit"]:hover {
+   background-color: #0056b3;
+}
+
+.signup-container p {
+   margin-top: 50px;
+   position: center;
+}
+
+.signup-container a {
+   color: #007bff;
+   text-decoration: none;
+}
+/* Apply styles to form controls */
+.form-control {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+/* Style the select dropdown */
+.form-control select {
+  height: 40px;
+}
+
+/* Add space between elements */
+.form-control + .form-control {
+  margin-top: 10px;
+}
+
+/* Style the primary button */
+.btn-primary {
+   background: linear-gradient(to bottom, #152574, #2c69a3);
+    background-color: #152074;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Style the modal footer */
+.modal-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color:#152074
+}
+
+</style>
+</head>
+<br>
+<br><br><br><br>
+<body >
+
+  
+    <div class="signup-container">
+        <h2>Welcome</h2>
+        <!-- <form (submit)="addEmploye()"> 
+          <input type="text" [(ngModel)]="newEmploye.idEmploye" name="idEmploye" placeholder="ID">
+          <p></p>  
+         
+          <select [(ngModel)]="newEmploye.etatE" name="etatE">
+            <option [value]="etatE.abscent">Abscent</option>
+            <option [value]="etatE.present">Present</option>
+            
+          </select>  
+          
+          <input type="text" [(ngModel)]="newEmploye.nom" name="nom" placeholder="Nom">
+          <input type="text" [(ngModel)]="newEmploye.prenom" name="prenom" placeholder="Prénom">
+          <input type="text" [(ngModel)]="newEmploye.adresseEmploye" name="adresseEmploye" placeholder="Adresse">
+          <p></p>
+          <input type="date" [(ngModel)]="newEmploye.DateDeNaissance" name="DateDeNaissance" placeholder="Date de Naissance">
+          
+          <input type="text" [(ngModel)]="newEmploye.montantAvantage" name="montantAvantage" placeholder="Montant Avantage">
+          <input type="text" [(ngModel)]="newEmploye.montantSalaire" name="montantSalaire" placeholder="Montant Salaire">
+          <input type="password" [(ngModel)]="newEmploye.password" name="password" placeholder="Mot de passe">
+           <p></p>
+           
+           
+             
+          <select [(ngModel)]="newEmploye.typeEmploye" name="typeEmploye">
+            <option [value]="typeEmploye.Dirigeant">Dirigeant</option>
+            <option [value]="typeEmploye.UnEmploye">Un Employé</option>
+          </select>
+            
+         </form>  -->
+         <form [formGroup]="empDetail"> 
+            <div class="mb-3">
+            <input type="number" formControlName="idemploye" id="idemploye" class="form-control" placeholder="ID">
+            </div>
+            
+            <div class="mb-3">
+
+            <select formControlName="etate" id="etate" name="etatE" class="form-control">
+               <option value="abscent" >Abscent</option>
+               <option value="present">Present</option>
+             </select>
+            </div>
+             <div class="mb-3">
+            <input type="text" formControlName="nom" id="nom" class="form-control" placeholder="Nom">
+            </div>
+            <div class="mb-3">
+            <input type="text" formControlName="prenom" id="prenom" class="form-control" placeholder="Prénom">
+             </div>
+            <div class="mb-3">
+                <input type="text" formControlName="adresseemploye" name="adresseemploye" class="form-control" placeholder="Adresse">
+             </div>
+            <input type="date" formControlName="datedenaissance" name="datedenaissance" class="form-control" placeholder="Date de Naissance">
+            
+            <input type="number" formControlName="montantavantage" name="montantavantage"class="form-control"  placeholder="Montant Avantage"><br>
+            <input type="number" formControlName="montantsalaire" name="montantsalaire" class="form-control"  placeholder="Montant Salaire"><br>
+            <input type="password" formControlName="password" name="password" placeholder="Mot de passe"><br>
+             
+            <br><select formControlName="typeEmploye" name="typeEmploye" class="form-control">
+               <option value="dirigeant">Dirigeant</option>
+               <option value="unemploye">Un Employé</option>
+             </select>
+               
+          <!--    <select formControlName="typeEmploye" name="typeEmploye" class="form-control">
+                <option [value]="TypeEmploye.Dirigeant">Dirigeant</option>
+                <option [value]="TypeEmploye.UnEmploye">Un Employé</option>
+              </select> -->
+         
+            <div class="modal-footer">
+               
+                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="addEmployee()" routerLink="/accueil">Add employee</button>
+              </div>
+              <router-outlet></router-outlet>
+            </form> 
+          
+      </div>
+   
+      
+      
+</body>
+
+</html>
+

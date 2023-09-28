@@ -1,0 +1,80 @@
+<p>add-employee works!</p>
+
+<div class="container-xxl py-5 bg-white">
+    <div class="container">
+      <div class="row g-0">
+        <div class="col-lg-6 wow fadeIn centerdiv" data-wow-delay="0.1s">
+          <div class="bg-transparent p-5">
+            <h1 class="text-uppercase mb-4 text-center titre">Ajouter employe</h1>
+  
+            <form (ngSubmit)="AjouterEmploye()" id="feedback-form">
+              <!-- Form fields -->
+              <div class="row g-3">
+             
+                <div class="form-floating">
+                  <input required type="text" id="nom" [(ngModel)]="employe.nom" name="nom" class="form-control bg-white" style="height: 100px;border-radius:8px"  />
+                  <label for="message" class="thick">Nom</label>
+                </div>
+              </div>
+              <br>
+  
+            <div class="col-12">
+                <div class="form-floating">
+                    <input required type="text" id="prenom" [(ngModel)]="employe.prenom" name="prenom" class="form-control bg-white" style="height: 100px;border-radius:8px"  />
+                    <label for="message" class="thick">Prenom</label>
+                  </div>
+            </div>
+            <br>
+  
+            <div class="col-12">
+                <div class="form-floating">
+                    <input required type="number"  id="idemploye" [(ngModel)]="employe.idemploye" name="idemploye" class="form-control bg-white" style="height: 100px;border-radius:8px"  />
+                    <label for="message" class="thick">idemploye</label>
+                  </div>
+              </div>
+              <br>
+  
+            <div class="col-12">
+              <div class="form-group">
+  
+                <button class="btn btn-primary col-12 " style="border-radius:8px" type="submit" name="submit_reg">Submit</button>
+                                  </div>
+            </div>
+  
+  
+              <!-- Submit button -->
+            </form>
+          </div>
+        </div>
+  
+            
+                
+          <h2 class="text-uppercase mb-4 text-center titre">Liste employe</h2>
+          <table class="table table-striped">
+            <thead>
+                <tr>
+                  <th>Nom</th>
+                  <th>prenom</th>
+                  <th>ID</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let employe of listemploye">
+                  <td>{{ employe.nom }}</td>
+                  <td>{{ employe.prenom }}</td>
+                  <td>{{ employe.idemploye }}</td>
+                  
+                  <td>
+               
+    
+                </tr>
+              </tbody>
+            <!-- Table content -->
+          </table>
+        </div>
+      </div>
+    </div>
+
+  
+  

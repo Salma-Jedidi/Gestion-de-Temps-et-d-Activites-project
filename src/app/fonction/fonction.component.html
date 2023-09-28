@@ -1,0 +1,43 @@
+<p>fonction works!</p>
+<body>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<br><br><br>
+<p></p>
+<p></p>
+<br><br><br> 
+<div class="container">
+ 
+<h2>     Veuillez saisir l'ID du Contrat</h2><br>
+<br><div>
+  <label for="idcontrat">ID Contrat:</label>
+  <br>
+  <input type="number" id="idcontrat" [(ngModel)]="idcontrat">
+  <br>
+  <br> <input type="text" [(ngModel)]="nouvelleFonction.idfonction" name="idFonction" placeholder="idFonction">
+  <br>
+  <br><input type="text" [(ngModel)]="nouvelleFonction.libellef" name="libelleF" placeholder="libelleF">
+  <br> 
+  <br><br>
+  <div>
+  <td><button (click)="ajouterFonction()">Ajouter Fonction</button></td>
+  <td><button (click)="rechercherFonctions()">Rechercher</button>
+  </td></div>
+</div>
+<div *ngIf="fonctions.length > 0">
+  <h2>Liste des fonctions pour le contrat {{ idcontrat }}</h2>
+  <ul>
+    <li *ngFor="let fonction of fonctions">
+      {{ fonction.libellef }} (ID: {{ fonction.idfonction }})
+    </li>
+  </ul>
+</div>
+<div *ngIf="fonctions.length === 0">
+  <p>Aucune fonction trouvée pour le contrat {{ idcontrat }}.</p>
+</div>
+</div>
+<p></p>
+<p></p>
+<p></p><br><br><br><br><br><br><br><br></body>

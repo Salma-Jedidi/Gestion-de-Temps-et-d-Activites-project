@@ -1,0 +1,35 @@
+<p>les-salaires works!</p>
+<br>
+<p></p>
+<br>
+<p></p>
+<br><br>
+<h2>Les Salaires pour l'Employé</h2>
+<br><br><br>
+<div class="employee-container">
+  <div class="input-container">
+    <label for="employeeId">Enter Employee ID: </label><br><br>
+    <input type="number" id="employeeId" [(ngModel)]="employeeId" >
+    
+    <br>
+    <label for="employeeId">Enter Employee password: </label><br><br>
+    <input type="text" id="employeePassword" [(ngModel)]="employeePassword" >
+    <br><br><button (click)="fetchSalary()" class="fetch-button">Fetch Salary</button>
+  </div>
+
+  <div class="salary-list" *ngFor="let employe of employeWithSalary">
+    <div class="employee-info">
+      <br><span class="employee-id">Employee ID: {{ employe.idemploye }}</span>
+      <br><span class="calculated-salary">Salaire total calculé: {{ employe.montantsalaire }}</span>
+      <br><span class="name">Nom et Prénom: {{ employe.nom }} {{ employe.prenom }}</span>
+      <br><span class="salary">Salaire: {{ employe.montantsalaire }}</span>
+      <br><span class="advantage">Avantage: {{ employe.montantavantage }}</span>
+      <!-- Display other employee details as needed -->
+    </div>
+  </div>
+</div>
+
+<br>
+<p></p><br><br>
+<p></p><br>
+<router-outlet></router-outlet>

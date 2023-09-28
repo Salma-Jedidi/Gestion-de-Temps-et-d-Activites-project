@@ -1,0 +1,71 @@
+<p>espace-dirigeant works!</p>
+<br>
+
+
+<br>
+<div class="fondecran">
+    <p></p>
+<br>
+<p></p>
+<br>
+<p></p>
+<label for="idemploye">ID de l'employé :</label>
+<br>
+<br><input type="number" [(ngModel)]="idemploye" name="idemploye">
+<br>
+<br><button (click)="checkEmployeeType(idemploye)">Vérifier</button>
+
+<br>
+<div *ngIf="isDirigeant">
+  <ul>
+    <th>
+        <li><img src="assets/Images/manager.png"style="width: 80px;"><a routerLink="/fonctions" href="#"> <a> </a>Gestion des carrières</a></li>
+            </th> 
+        <p></p>
+        <br>
+        
+        <th><li><img src="assets/Images/recrutement.jpg"  style="width: 80px;"><a href="#" routerLink="/inscription" > <a> </a>Recrutement</a></li></th>
+        <p></p><br>
+        <th><li><img src="assets/Images/stat.jpg"style="width: 80px;"><a routerLink="/stat" href="#"> Afficher les employés</a></li></th>
+        <p></p><br>
+        <th><li><img src="assets/Images/demandes.webp"style="width: 80px;"><a href="#" routerLink="/demande"> <a> </a>Traitement des demandes</a></li></th>
+        <router-outlet></router-outlet>
+    </ul>
+</div>
+<div *ngIf="isNonDirigeant">
+    <!-- Contenu à afficher si l'employé n'est pas un dirigeant -->
+    <p>Cet employé n'est pas un dirigeant.</p>
+  </div>
+<!-- <div *ngIf="!isDirigeant && showAlert">
+  <app-alert [message]="'Veuillez réessayer.'" (close)="showAlert = false"></app-alert>
+</div> -->
+<!-- <label for="typeEmploye">Type d'employé :</label>
+<input type="text" [(ngModel)]="typeEmploye" name="typeEmploye">
+<button (click)="checkEmployeeType()">Vérifier</button>
+<div *ngIf="typeEmploye === 'dirigeant'">
+<ul>
+    <th>
+    <li><img src="assets/Images/manager.png"style="width: 80px;"><a routerLink="/fonctions" href="#"> <a> </a>Gestion des carrières</a></li>
+        </th> 
+    <p></p>
+    <br>
+    
+    <th><li><img src="assets/Images/recrutement.jpg"  style="width: 80px;"><a href="#" routerLink="/inscription" > <a> </a>Recrutement</a></li></th>
+    <p></p><br>
+    <th><li><img src="assets/Images/stat.jpg"style="width: 80px;"><a routerLink="/stat" href="#"> Afficher les employés</a></li></th>
+    <p></p><br>
+    <th><li><img src="assets/Images/demandes.webp"style="width: 80px;"><a href="#" routerLink="/demande"> <a> </a>Traitement des demandes</a></li></th>
+    <router-outlet></router-outlet>
+</ul>
+
+</div>
+<div *ngIf="showAlert">
+    <app-alert [message]="'Veuillez réessayer.'" (close)="showAlert = false"></app-alert>
+  </div> -->
+<p></p>
+</div>
+<br>
+<p></p>
+<br>
+<p></p>
+<br>

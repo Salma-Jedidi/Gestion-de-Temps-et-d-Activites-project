@@ -1,0 +1,94 @@
+<p>stat works!</p>
+<br>
+<p></p>
+<br>
+<p></p><br>
+<p></p><br>
+<p></p>
+
+<h2>Liste des Employés</h2>
+<br>
+<br>
+<div class="employee-container">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Adresse</th>
+        <th>Action 1</th>
+        <th>Action 2</th>
+        
+      </tr>
+      
+    </thead>
+    <tbody>
+    
+       
+      <tr *ngFor="let employe of employes">
+        <td>{{ employe.idemploye }}</td>
+        <td>{{ employe.nom }}</td>
+        <td>{{ employe.prenom }}</td>
+        <td>{{ employe.adresseemploye }}</td>
+        <td>
+          <button (click)="deletEmploye(employe.idemploye)" class="btn btn-danger custom-delete-button">Supprimer</button>
+        </td>
+        
+        <td>
+          <button (click)="updateEmployee()" class="btn btn-primary custom-edit-button">Modifier</button>
+        </td>
+        
+        
+      </tr>
+    </tbody>
+  </table>
+
+  <form [formGroup]="empDetail" *ngIf="showEditForm"> 
+    <div class="mb-3">
+    <input type="number" formControlName="idemploye" id="idemploye" class="form-control" placeholder="ID">
+    </div>
+    <br>
+    <div class="mb-3">
+
+    <select formControlName="etate" id="etate" name="etatE" class="form-control">
+       <option value="abscent" >Abscent</option>
+       <option value="present">Present</option>
+     </select>
+    </div>
+     <div class="mb-3">
+    <input type="text" formControlName="nom" id="nom" class="form-control" placeholder="Nom">
+    </div>
+    <div class="mb-3">
+    <input type="text" formControlName="prenom" id="prenom" class="form-control" placeholder="Prénom">
+     </div>
+    <div class="mb-3">
+        <input type="text" formControlName="adresseemploye" name="adresseemploye" class="form-control" placeholder="Adresse">
+     </div><br>
+    <input type="date" formControlName="datedenaissance" name="datedenaissance" class="form-control" placeholder="Date de Naissance">
+    <br>
+    <br><input type="number" formControlName="montantavantage" name="montantavantage"class="form-control"  placeholder="Montant Avantage"><br>
+    <br><input type="number" formControlName="montantsalaire" name="montantsalaire" class="form-control"  placeholder="Montant Salaire"><br>
+    <br><input type="password" formControlName="password" name="password" placeholder="Mot de passe">
+     <p></p>
+     
+     <select formControlName="typeEmploye" name="typeEmploye" class="form-control">
+       <option value="dirigeant">Dirigeant</option>
+       <option value="unemploye">Un Employé</option>
+     </select>
+       
+  <!--    <select formControlName="typeEmploye" name="typeEmploye" class="form-control">
+        <option [value]="TypeEmploye.Dirigeant">Dirigeant</option>
+        <option [value]="TypeEmploye.UnEmploye">Un Employé</option>
+      </select> -->
+ <br>     
+ <button type="button" class="btn btn-primary" (click)="verifierModification()">Vérifier la Modification</button>
+
+    </form> 
+<br>
+<p></p><br>
+<p></p><br>
+<p></p>
+<br>
+<p></p><br>
+<p></p>

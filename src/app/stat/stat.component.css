@@ -1,0 +1,50 @@
+.employee-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  button  {
+    background-color: #ff002b;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+  }
+  .custom-delete-button {
+    /* Vos styles personnalisés pour le bouton Supprimer */
+    background: linear-gradient(to bottom, #dc3545, #ff5252);
+    background-color: #b01c1f;
+    border-color: #dc3545;
+    color: #fff;
+    /* Autres styles... */
+  }
+  
+  .custom-edit-button {
+    /* Vos styles personnalisés pour le bouton Modifier */
+    background: linear-gradient(to bottom, #267415, #2ca34e);
+    background-color: #267415;
+    border-color: #00ff48;
+    color: #fff;
+    /* Autres styles... */
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel="stylesheet" href="C:\Users\21623\Desktop\stage\front-gestion-project\src\app\app.component.css">
+
+<div id="app" class="bb">
+
+  <nav class="navbar">
+    <div>
+        <img src="assets/Images/logo.png" width="32%">
+    </div>
+
+    <div id="wrap">
+        <ul class="navbar">
+            <li>
+                <a routerLink="/accueil" href="#">Accueil</a>
+            </li>
+
+            <li>
+                <a href="#">Espace Dirigeant</a>
+                <ul>
+                    <li><a href="#" routerLink="/fonctions">Gestion des carrières</a></li>
+                    <li><a href="#" routerLink="/inscription">Recrutement</a></li>
+                    <li><a  routerLink="/stat" href="#">Afficher les des employés</a></li>
+                    <li><a href="#" routerLink="/demande">Traitement des demandes</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Espace Employé</a>
+                <ul>
+                    <li><a href="assets/pdf/demandeD'avantage.pdf" download="demandeD'avantage.pdf">Demander d'avantages</a></li>
+                    <li><a href="https://itm.public.lu/dam-assets/fr/publications/modele-types/lettres/demande-conge/demande-conge.pdf" target="_blank" alt="demande-conge">Demande de congé</a></li>
+                    <li><a href="#" routerLink="/salaires">Afficher les salaires</a></li>
+                    <li><a href="https://www.lettres-gratuites.com/modele-lettre-gestion-entreprise.html">Demander des intrapreneuriats</a></li>
+                    <li><a href="assets/pdf/demande-de-formation-professionnelle.pdf" download="demandeD'avantage.pdf">Demander des formations</a></li>
+                    <li><a href="assets/pdf/demandeRetraite.pdf" download="demandeRetraite.pdf">Gestion des retraites</a></li>
+                   
+                </ul>
+            </li>
+
+            <li>
+                
+                    <a routerLink="/inscription">Inscription</a>
+                    
+                
+            </li>
+        </ul>
+        <router-outlet></router-outlet>
+    </div>
+</nav>
+
+
+ 
+  <main >
+  
+    <!-- Main content -->
+    
+<router-outlet></router-outlet>
+  </main>
+
+ <!-- Footer section -->
+ <footer class="pied-de-page">
+
+
+    
+    <div class="social-icons">
+        <a href="https://www.instagram.com"><img class="img-fluid" src="assets/Images/insta.png" alt="Instagram" width="3.5%" target="blank"></a>
+        <a href="https://www.facebook.com"><img class="img-fluid"  src="assets/Images/face.png" alt="Facebook" width="3.9%" target="blank"></a>
+        <a href="https://www.google.com/maps/place/Rue+Malaga,+Tunis/@36.8369943,10.1470391,17z/data=!3m1!4b1!4m6!3m5!1s0x12fd336b6a1d9465:0x33dcd281c96a9aaf!8m2!3d36.8369943!4d10.149614!16s%2Fg%2F1tcth_pv?entry=ttu"><img class="img-fluid"  src="assets/Images/loc.png" alt="Location" width="5.5%" target="blank"></a>
+        
+      </div>
+  <div class="container text-center">
+    <span>Copyright &copy; Gestion. All rights reserved.</span>
+  </div> 
+</footer>

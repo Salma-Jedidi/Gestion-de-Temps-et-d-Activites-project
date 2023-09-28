@@ -1,0 +1,47 @@
+.custom-delete-button {
+    /* Vos styles personnalisés pour le bouton Supprimer */
+    background: linear-gradient(to bottom, #dc3545, #ff5252);
+    background-color: #b01c1f;
+    border-color: #dc3545;
+    color: #fff;
+    /* Autres styles... */
+  }
+  
+  .custom-edit-button {
+    /* Vos styles personnalisés pour le bouton Modifier */
+    background: linear-gradient(to bottom, #267415, #2ca34e);
+    background-color: #267415;
+    border-color: #00ff48;
+    color: #fff;
+    /* Autres styles... */
+  }
+  .custom-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+  }
+  /* styles.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .table-heading {
+    font-weight: bold;
+    background-color: #f2f2f2;
+  }
+  
+  .request-status {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  

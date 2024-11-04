@@ -1,18 +1,27 @@
 <link rel="stylesheet" href="C:\Users\21623\Desktop\stage\front-gestion-project\src\app\accueil\accueil.component.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <main class="fondecran">
 <div class="container ">
     <div class="container-fluid px-0">
       <!--  section -->
       <div class="jumbotron text-center bg-info text-white">
         <br>
-     
+        <br> <br> 
         <hr class="my-4">
- 
-        <div class="center-text">
-        <p class="bold-large-centered">Votre solution unique pour gérer efficacement les tâches . 
-         Découvrez nos fonctionnalités et services. Inscrivez-vous ou connectez-vous pour accéder à plus!</p></div>
-        
-     
+        <section class="hero-section">
+          <h1>TimeMaster</h1>
+          <p class="bold-large-centered">Votre solution unique pour gérer efficacement les tâches.<br>
+             Découvrez nos fonctionnalités et services. Inscrivez-vous ou connectez-vous pour accéder à plus !
+          </p>
+          <div class="button-group">
+              <button class="btn">Se connecter</button>
+              
+              <button class="btn">Inscrivez-vous</button>
+          </div>
+      </section>
+  
+      <section class="content-section">
         <div class="carreaux-container">
           <div class="carreau" id="carreau1" routerLink="/EspaceDirig">
             <!-- Contenu du carreau 1 -->
@@ -27,7 +36,34 @@
           </div>
         </div>
         
-        
+          
+      </section>
+      <h1>Nos services</h1>
+      <div class="center-text">
+       
+
+        <section class="services">
+            <div class="card">
+                <h2>Espace Dirigeant</h2>
+                <ul>
+                  
+                    <li><i class="fa-solid fa-clipboard-check"></i>Gestion des tâches</li>
+                    <li><i class="fa-solid fa-chart-line"></i>Suivi des performances</li>
+                    <li><i class="fa-solid fa-book"></i>Rapports et analyses</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>Espace Employé</h2>
+                <ul>
+                    <li><i class="fa-solid fa-business-time"></i>Suivi des heures</li>
+                    <li><i class="fa-solid fa-square-xmark"></i>Gestion des absences</li>
+                    <li><i class="fa-solid fa-comment-dots"></i>Feedback en temps réel</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+        <br>
        
         
           <div class="contact-info">

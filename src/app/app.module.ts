@@ -16,6 +16,7 @@ import { FonctionComponent } from './fonction/fonction.component';
 import { LesSalairesComponent } from './les-salaires/les-salaires.component';
 import { TraitementDesDemandesComponent } from './traitement-des-demandes/traitement-des-demandes.component';
 import { AlertComponent } from './alert/alert.component';
+import { SignComponent } from './sign/sign.component';
 
 
 
@@ -34,6 +35,7 @@ import { AlertComponent } from './alert/alert.component';
     LesSalairesComponent,
     TraitementDesDemandesComponent,
     AlertComponent,
+    SignComponent,
 
 
 

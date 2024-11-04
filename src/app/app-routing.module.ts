@@ -11,6 +11,7 @@ import { fonction } from './models/Fonction';
 import { LesSalairesComponent } from './les-salaires/les-salaires.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { TraitementDesDemandesComponent } from './traitement-des-demandes/traitement-des-demandes.component';
+import { SignComponent } from './sign/sign.component';
 
 
 
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'fonctions',component:FonctionComponent},
   {path:'salaires',component:LesSalairesComponent},
   {path:'ajout',component:AddEmployeeComponent},
-  {path:'demande',component:TraitementDesDemandesComponent}
+  {path:'demande',component:TraitementDesDemandesComponent},
+  {path:'sign',component:SignComponent}
   
 ];
 
